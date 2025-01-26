@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tapioca_0: 5347924108330749923
+      Tapioca_1: -1792420242153449735
+      Tapioca_2: 3416011228649082853
+      Tapioca_3: 5769261388039689199
+      Tapioca_4: 904477629559916132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

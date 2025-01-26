@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mellonPearls_0: -1779780778237065133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

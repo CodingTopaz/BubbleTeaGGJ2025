@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StrawberyPearls_0: 6064081607643173106
+      StrawberyPearls_1: 5617460163930943729
+      StrawberyPearls_2: -3276264620191345952
+      StrawberyPearls_3: 3297655242019432603
+      StrawberyPearls_4: 5319459360027009076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

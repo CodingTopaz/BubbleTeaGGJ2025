@@ -61,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tapioca sprites_0: 4326797525037898077
+      tapioca sprites_1: -997032226005029790
+      tapioca sprites_2: 744319276899048683
+      tapioca sprites_3: -3765077767319261384
+      tapioca sprites_4: 2827038649169295212
+      tapioca sprites_5: 9079645905574306953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      matcha tea sprite_0: -5278212523367697500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

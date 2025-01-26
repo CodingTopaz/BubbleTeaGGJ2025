@@ -58,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grass jelly sprite_0: 7361139753238240924
+      grass jelly sprite_1: 1166824562017500153
+      grass jelly sprite_2: 7733146362691006271
+      grass jelly sprite_3: -3640722139017182106
+      grass jelly sprite_4: -1824939849490642598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

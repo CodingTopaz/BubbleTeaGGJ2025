@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blueberryPearls_0: 4096287666585711232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

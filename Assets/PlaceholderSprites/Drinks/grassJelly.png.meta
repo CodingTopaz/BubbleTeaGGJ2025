@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grassJelly_0: 4384743262493192863
+      grassJelly_1: 5650593540464420418
+      grassJelly_2: 6685097333421511838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

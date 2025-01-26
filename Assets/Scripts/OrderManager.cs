@@ -2,26 +2,22 @@
 using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 using Random = UnityEngine.Random;
 
 
 public class OrderManager : MonoBehaviour
 {
     public GameManager gameManager;
-   // public List<Bubble> possibleBubbles = new List<Bubble>();
-    // public List<Jelly> possibleJellies = new List<Jelly>();
+    public UiHandler uiHandler;
+
     public List<Topping> possibleToppings = new List<Topping>();
     public List<Ice> possibleIce = new List<Ice>();
 
     public List<Drink.DrinkBase> possibleDrinks = new List<Drink.DrinkBase>();
 
     public Drink desiredDrink;
-
-    private void Start()
-    {
-
-    }
-
+    
     /// <summary>
     /// Populates all the ingredient lists with pre-defined ingredients.
     /// </summary>
@@ -53,16 +49,27 @@ public class OrderManager : MonoBehaviour
 
     public void CreateDrinkOrder()
     {
-        //get a random ingredient from each ingreduent list (bubbles, jellies, ice)
-        //Add each ingredient to desiredDrink's drinkIngredients list
-        desiredDrink = new Drink
-        {
-            drinkBase = possibleDrinks[Random.Range(0, possibleDrinks.Count)],
-        };
+     
+        //create a new drink and initlizae it's base with a random base.
+        desiredDrink = new Drink { };
+        desiredDrink.drinkBase = possibleDrinks[Random.Range(0, possibleDrinks.Count)];
+        string desiredDrinkBase = desiredDrink.drinkBase.ToString();
+        uiHandler.UpdateDesiredOrderDisplay(desiredDrinkBase);
 
-        desiredDrink.AddIngredient(possibleToppings[Random.Range(0, possibleToppings.Count)]);
-        // desiredDrink.drinkIngredients.Add(possibleJellies[Random.Range(0, possibleJellies.Count)]);
-        desiredDrink.drinkIngredients.Add(possibleIce[Random.Range(0, possibleIce.Count)]);
+        //get a random ingredient from each ingredient list (bubbles, jellies, ice)
+        //Add each ingredient to desiredDrink's drinkIngredients list
+        DrinkIngredient desiredTopping = possibleToppings[Random.Range(0, possibleToppings.Count)];
+        desiredDrink.AddIngredient(desiredTopping);
+        string desiredToppingName = desiredTopping.IngredientName;
+        uiHandler.UpdateDesiredOrderDisplay(desiredToppingName);
+
+        DrinkIngredient desiredIce = possibleIce[Random.Range(0, possibleIce.Count)];
+        desiredDrink.AddIngredient(desiredIce);
+        string desiredIceName = desiredIce.IngredientName;
+        uiHandler.UpdateDesiredOrderDisplay(desiredIceName);
+        
+        string desiredOrderText = "-" + desiredDrinkBase + "\n" + "-" + desiredToppingName + "\n" + "-" + desiredIceName;
+        uiHandler.UpdateDesiredOrderDisplay(desiredOrderText);
     }
 
     public void ClearDrinkOrder()

@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      coffeeJelly_0: 2915511991211659153
+      coffeeJelly_1: 3769519813391744866
+      coffeeJelly_2: -8811175399059631140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

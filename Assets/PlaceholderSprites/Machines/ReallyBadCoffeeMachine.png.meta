@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ReallyBadCoffeeMachine_0: 8715816625104769019
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

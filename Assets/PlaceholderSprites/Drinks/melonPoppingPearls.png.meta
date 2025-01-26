@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      melonPoppingPearls_0: 4844263075991648768
+      melonPoppingPearls_1: -2606502260977589441
+      melonPoppingPearls_2: -6653961452890744439
+      melonPoppingPearls_3: 7358082849513239132
+      melonPoppingPearls_4: -2183684638600859648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

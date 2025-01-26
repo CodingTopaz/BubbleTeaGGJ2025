@@ -1,29 +1,48 @@
+using System;
 using UnityEngine;
 
 public class DrinkBaseButton : MonoBehaviour
 {
     public GameManager gameManager;
     public Drink.DrinkBase drinkBase;
+    public GameObject drinkBaseVisuals;
+    public GameObject[] drinkBaseVisualList;
+    public CupButton cupButton;
+
+
+    private void Start()
+    {
+        cupButton = GameObject.Find("CupButton").GetComponent<CupButton>();
+    }
 
     private void OnMouseDown()
     {
-        if (drinkBase == Drink.DrinkBase.Milk)
+        if (cupButton.isCup)
         {
-            gameManager.playerDrink.drinkBase = Drink.DrinkBase.Milk;
-            Debug.Log("set drink type to" + gameManager.playerDrink.drinkBase.ToString());
-        } else if (drinkBase == Drink.DrinkBase.Fruit)
+            gameManager.playerDrink.drinkBase = drinkBase;
+            Debug.Log("set drink type to" + gameManager.playerDrink.drinkBase);
+            ClearDrinkBaseVisuals();
+            AddDrinkBaseVisuals();
+        }
+        else
         {
-            gameManager.playerDrink.drinkBase = Drink.DrinkBase.Fruit;
-            Debug.Log("set drink type to" + gameManager.playerDrink.drinkBase.ToString());
+            Debug.Log("no cup :(");
+        }
 
-        } else if (drinkBase == Drink.DrinkBase.Matcha)
-        {
-            gameManager.playerDrink.drinkBase = Drink.DrinkBase.Matcha;
-            Debug.Log("set drink type to" + gameManager.playerDrink.drinkBase.ToString());
+    }
 
-        } else
+    void AddDrinkBaseVisuals()
+    {
+        drinkBaseVisuals.SetActive(true);
+        Debug.Log("set " +drinkBaseVisuals.name + "to active");
+    }
+
+    void ClearDrinkBaseVisuals()
+    {
+        foreach (GameObject drinkBaseVisual in drinkBaseVisualList)
         {
-            Debug.LogError("No drink base found with the desired name");
+            drinkBaseVisual.SetActive(false);
+            Debug.Log("set " +drinkBaseVisual.name + "to inactive");
         }
     }
 

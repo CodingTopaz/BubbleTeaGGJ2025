@@ -7,6 +7,9 @@ public class DrinkBuilder : MonoBehaviour
     public void AddIngredient(DrinkIngredient ingredient)
     {
         gameManager.playerDrink.AddIngredient(ingredient);
+        
+        
+        
     }
     
     public void ClearDrinkOrder()

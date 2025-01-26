@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DrinkLidsMachine_0: -662140419119919371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

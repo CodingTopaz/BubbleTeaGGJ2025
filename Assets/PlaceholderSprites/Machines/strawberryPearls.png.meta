@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      strawberryPearls_0: -5681820787371979173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

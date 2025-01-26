@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RainbowJelly_0: -8619032455938471709
+      RainbowJelly_1: -4268947965761696015
+      RainbowJelly_2: 5622545152365223308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bluberryPearls_0: 5906900397516705582
+      bluberryPearls_1: 7999219623160497619
+      bluberryPearls_2: -4387923876892604532
+      bluberryPearls_3: -7743769799383600982
+      bluberryPearls_4: -741085452383302751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
