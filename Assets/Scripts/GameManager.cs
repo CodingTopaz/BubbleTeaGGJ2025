@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public OrderManager orderManager;
     public DrinkBuilder drinkBuilder;
     public Drink playerDrink;
+    public CupButton cupButton;
 
     public float score;
     public TMP_Text scoreText;
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
         orderManager.ClearDrinkOrder();
         orderManager.CreateDrinkOrder();
         drinkBuilder.AddIngredient(orderManager.possibleIce[0]);
+
+        cupButton.DisableCup();
     }
 
     public void UpdateScoreText()

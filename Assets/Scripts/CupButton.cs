@@ -6,13 +6,23 @@ public class CupButton : MonoBehaviour
     public bool isCup;
     private void Start()
     {
-        cupDisplay.SetActive(false);
-        isCup = false;
+        DisableCup();
     }
 
     private void OnMouseDown()
     {
+        EnableCup();
+    }
+
+    public void EnableCup()
+    {
         cupDisplay.SetActive(true);
         isCup = true;
+    }
+
+    public void DisableCup()
+    {
+        cupDisplay.SetActive(false);
+        isCup = false;
     }
 }
