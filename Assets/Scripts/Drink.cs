@@ -5,7 +5,7 @@ public class Drink
 {
     public enum DrinkBase
     {
-        Milk, Fruit, Matcha, None
+        MilkTea, FruitTea, Matcha, None
     }
     
     public DrinkBase drinkBase;

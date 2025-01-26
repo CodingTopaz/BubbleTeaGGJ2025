@@ -24,27 +24,27 @@ public class OrderManager : MonoBehaviour
     public void InitializeIngredients()
     {
         //Base Drinks List
-        possibleDrinks.Add(Drink.DrinkBase.Milk);
-        possibleDrinks.Add(Drink.DrinkBase.Fruit);
+        possibleDrinks.Add(Drink.DrinkBase.MilkTea);
+        possibleDrinks.Add(Drink.DrinkBase.FruitTea);
         possibleDrinks.Add(Drink.DrinkBase.Matcha);
 
         //Toppings List
             //Bubble List
-            possibleToppings.Add(new Topping (false, "tapioca", Topping.ToppingType.Bubble)); //Index 0 
-            possibleToppings.Add(new Topping(true, "strawberry", Topping.ToppingType.Bubble)); //Index 1 
-            possibleToppings.Add(new Topping(true, "blueberry", Topping.ToppingType.Bubble)); //Index 2
-            possibleToppings.Add(new Topping(true, "melon", Topping.ToppingType.Bubble)); //Index 3
+            possibleToppings.Add(new Topping (false, "Tapioca", Topping.ToppingType.Bubble)); //Index 0 
+            possibleToppings.Add(new Topping(true, "Strawberry", Topping.ToppingType.Bubble)); //Index 1 
+            possibleToppings.Add(new Topping(true, "Blueberry", Topping.ToppingType.Bubble)); //Index 2
+            possibleToppings.Add(new Topping(true, "Melon", Topping.ToppingType.Bubble)); //Index 3
             
             //Jelly List
-            possibleToppings.Add(new Topping(false, "grass", Topping.ToppingType.Jelly)); //Index 4
-            possibleToppings.Add(new Topping(false, "coffee", Topping.ToppingType.Jelly)); //Index 5
-            possibleToppings.Add(new Topping(false, "rainbow", Topping.ToppingType.Jelly)); //Index 6
+            possibleToppings.Add(new Topping(false, "Grass", Topping.ToppingType.Jelly)); //Index 4
+            possibleToppings.Add(new Topping(false, "Coffee", Topping.ToppingType.Jelly)); //Index 5
+            possibleToppings.Add(new Topping(false, "Rainbow", Topping.ToppingType.Jelly)); //Index 6
             
         //Ice List
-        possibleIce.Add(new Ice("none"));
-        possibleIce.Add(new Ice("light"));
-        possibleIce.Add(new Ice("regular"));
-        possibleIce.Add(new Ice("extra"));
+        possibleIce.Add(new Ice("No"));
+        possibleIce.Add(new Ice("Lite"));
+        possibleIce.Add(new Ice("Regular"));
+        possibleIce.Add(new Ice("Extra"));
     }
 
     public void CreateDrinkOrder()
@@ -56,7 +56,7 @@ public class OrderManager : MonoBehaviour
         string desiredDrinkBase = desiredDrink.drinkBase.ToString();
         uiHandler.UpdateDesiredOrderDisplay(desiredDrinkBase);
 
-        //get a random ingredient from each ingredient list (bubbles, jellies, ice)
+        //get a random ingredient from the toppings list (bubbles, jellies, ice)
         //Add each ingredient to desiredDrink's drinkIngredients list
         DrinkIngredient desiredTopping = possibleToppings[Random.Range(0, possibleToppings.Count)];
         desiredDrink.AddIngredient(desiredTopping);
@@ -100,6 +100,7 @@ public class OrderManager : MonoBehaviour
         }
         
         gameManager.score += drinkScore;
+        gameManager.UpdateScoreText();
     }
 }
 
