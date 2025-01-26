@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DrinkTypeButton : MonoBehaviour
+public class DrinkBaseButton : MonoBehaviour
 {
     public GameManager gameManager;
     public Drink.DrinkBase drinkBase;

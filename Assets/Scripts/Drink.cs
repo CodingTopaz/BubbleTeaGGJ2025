@@ -5,7 +5,7 @@ public class Drink
 {
     public enum DrinkBase
     {
-        Milk, Fruit, Matcha
+        Milk, Fruit, Matcha, None
     }
     
     public DrinkBase drinkBase;
@@ -19,17 +19,26 @@ public class Drink
     public float CalculateScore(Drink desiredDrink)
     {
         float score = 100;
-        foreach (var ingredient in desiredDrink.drinkIngredients)
+
+        if (drinkBase == desiredDrink.drinkBase)
         {
-            if (!drinkIngredients.Exists(i => i.IngredientName == ingredient.IngredientName))
+            foreach (var ingredient in desiredDrink.drinkIngredients)
             {
-                score -= 20;
-                Debug.Log(ingredient.IngredientName + "doesn't exist in the desired drink.");
+                if (!drinkIngredients.Exists(i => i.IngredientName == ingredient.IngredientName))
+                {
+                    score -= 20;
+                    Debug.Log(ingredient.IngredientName + "doesn't exist in the desired drink.");
+                }
+                else
+                {
+                    Debug.Log(ingredient.IngredientName + "was scored.");
+                }
             }
-            else
-            {
-                Debug.Log(ingredient.IngredientName + "was scored.");
-            }
+        }
+        else
+        {
+            score -= 100;
+            Debug.Log("Wrong drink base! 0 Points!");
         }
         return score > 0 ? score : 0;
     }

@@ -13,5 +13,7 @@ public class Bubble : DrinkIngredient
         IngredientName = flavorSetting + "Bubble";
         popping = poppingSetting;
         flavor = flavorSetting;
+       
     }
+    
 }

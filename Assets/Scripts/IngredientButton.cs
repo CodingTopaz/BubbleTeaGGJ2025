@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
@@ -9,15 +10,13 @@ public class IngredientButton : MonoBehaviour
     public int ingredientIndex;
     public enum IngredientType
     {
-        Base,
-        Bubble,
-        Jelly,
-        Ice
+        Ice,
+        Topping
     }
     
     public IngredientType ingredientType;
     
-    public GameObject ingredientPrefab;
+    public GameObject ingredientDisplay;
     
     private void Start()
     {
@@ -26,28 +25,31 @@ public class IngredientButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
+        AddIngredientBackend();
+    }
+
+    private void AddIngredientBackend()
+    {
         //THIS IS BAD! DON'T DO THIS! 
         //We gotta check which ingredient we're adding but because Angelo didn't think ahead we defined all the ingredients
         //as objects in the orderManager instead of using ScriptableObjects.
-        if (ingredientType == IngredientType.Bubble)
+        if (ingredientType == IngredientType.Topping)
         {
-            gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleBubbles[ingredientIndex]);
-            Debug.Log("Added ingredient: " + gameManager.orderManager.possibleBubbles[ingredientIndex].IngredientName);
-        } else if (ingredientType == IngredientType.Jelly)
-        {
-            gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleJellies[ingredientIndex]);
-            Debug.Log("Added ingredient: " + gameManager.orderManager.possibleJellies[ingredientIndex].IngredientName);
-
+            gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleToppings[ingredientIndex]);
+            Debug.Log("Added Topping: " + gameManager.orderManager.possibleToppings[ingredientIndex].IngredientName);
         } else if (ingredientType == IngredientType.Ice)
         {
             gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleIce[ingredientIndex]);
-            Debug.Log("Added ingredient: " + gameManager.orderManager.possibleIce[ingredientIndex].IngredientName);
+            Debug.Log("Added Ice: " + gameManager.orderManager.possibleIce[ingredientIndex].IngredientName);
         }
         else
         {
             Debug.LogError("No ingredient found at the desired index");
         }
+    }
 
+    private void AddIngredientVisuals()
+    {
+        ingredientDisplay.SetActive(true);
     }
 }

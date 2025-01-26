@@ -8,4 +8,12 @@ public class DrinkBuilder : MonoBehaviour
     {
         gameManager.playerDrink.AddIngredient(ingredient);
     }
+    
+    public void ClearDrinkOrder()
+    {
+        gameManager.playerDrink.drinkBase = Drink.DrinkBase.None;
+        gameManager.playerDrink.drinkIngredients.Clear();
+        
+        
+    }
 }
