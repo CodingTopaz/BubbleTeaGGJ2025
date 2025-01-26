@@ -16,7 +16,7 @@ public class Topping : DrinkIngredient
     //this is a constructor that lets us automatically set the properties of this ingredient when we create a new one.
     public Topping(bool poppingSetting, string flavorSetting, ToppingType toppingTypeSetting)
     {
-        IngredientName = flavorSetting + toppingTypeSetting.ToString();
+        IngredientName = flavorSetting + " " + toppingTypeSetting.ToString();
         popping = poppingSetting;
         flavor = flavorSetting;
        

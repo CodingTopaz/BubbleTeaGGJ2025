@@ -36,6 +36,9 @@ public class ToppingsButton : MonoBehaviour
 
     private void AddIngredientBackend()
     {
+        //Remove all topping ingredients
+        gameManager.playerDrink.drinkIngredients.RemoveAll(x => x is Topping);
+        //Add the new desired ingredient
         gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleToppings[ingredientIndex]);
         Debug.Log("Added Topping: " + gameManager.orderManager.possibleToppings[ingredientIndex].IngredientName);
     }

@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Drink playerDrink;
 
     public float score;
+    public TMP_Text scoreText;
 
     private void Start()
     {
@@ -28,12 +29,11 @@ public class GameManager : MonoBehaviour
     {
         orderManager.ClearDrinkOrder();
         orderManager.CreateDrinkOrder();
+        drinkBuilder.AddIngredient(orderManager.possibleIce[0]);
+    }
 
-        Debug.Log(orderManager.desiredDrink.drinkBase);
-
-        foreach (DrinkIngredient ingredient in orderManager.desiredDrink.drinkIngredients)
-        {
-            Debug.Log(ingredient.IngredientName);
-        }
+    public void UpdateScoreText()
+    {
+        scoreText.text = score.ToString();
     }
 }

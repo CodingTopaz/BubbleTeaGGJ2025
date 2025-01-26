@@ -38,6 +38,9 @@ public class IceButton : MonoBehaviour
 
     private void AddIceBackend()
     {
+        //Remove all Ice ingredients
+        gameManager.playerDrink.drinkIngredients.RemoveAll(x => x is Ice);
+        //Add the new Ice ingredient
         gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleIce[currentIceIndex]);
         Debug.Log("Added Topping: " + gameManager.orderManager.possibleIce[currentIceIndex].IngredientName);
     }
@@ -60,5 +63,12 @@ public class IceButton : MonoBehaviour
         {
             obj.SetActive(false);
         }
+    }
+
+    public void ResetIce()
+    {
+        currentIceIndex = 0;
+        gameManager.drinkBuilder.AddIngredient(gameManager.orderManager.possibleIce[0]);
+        Debug.Log("Added Topping: " + gameManager.orderManager.possibleIce[0].IngredientName);
     }
 }
